@@ -124,6 +124,11 @@ Install/Remove Applications
 * `apt-get install my_software`: downloads and install "my_software" 
 * `apt-get remove my_software`: removes my_software from the machine
 
+Linux Basic Commands
+<p align="left">
+  <img src="01_basic_linux_commands.jpg"  width=650/>
+</p>
+
 Resources
 * [overview](https://www.mediacollege.com/linux/command/linux-command.html) of the most common Linux commands
 * if you ever come across a command (online) that you don't understand, use [explainshell.com](https://explainshell.com/)
