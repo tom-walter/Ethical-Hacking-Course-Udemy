@@ -1,4 +1,4 @@
-## 07 DNS Sppofing
+## 07 DNS Spoofing
 
 ### Intercepting Packets
 What's next?
@@ -45,7 +45,7 @@ Queuing and Modifying Packets
         --queue-num 0 # the # of the Queue
     ```
     * in Python, we can run this through `subprocess`
-* to restore the connection, delete the rules created by
+* to restore the connection, delete the created rules 
     ```
     iptables --flush
     ```
@@ -69,7 +69,7 @@ Netfilter Queue
         queue.run()							  # run modifications
     ```
     * this allows us to bind to the netfilter queue from the ip-table rules
-    * the packets are not in a raw format (machine-readable)
+    * the packets are now in a raw format (machine-readable)
 
 Converting NFQ Packets to Scapy Format
 * to make the information human-readable, we need to convert them to scapy format
@@ -84,7 +84,7 @@ Converting NFQ Packets to Scapy Format
 Web Servers: Machine and Service
 * companies that provide online services run their software on web servers
 * basically, web servers are also physical computers and connected to the internet
-* websites are files that are stored on this computer and hosted by a web server program
+* websites are files that are stored on a computer and hosted by a web server program
 * a well-know web server program is __apache2__
 * on kali, you can start an apachi2 server by running: `service apache2 start`
 * to access, these web servers, you can enter their ip-address into your browser
