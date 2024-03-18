@@ -23,9 +23,9 @@ def redirect_queue(queue_num: int) -> None:
 def restore_flow():
 	subprocess.call("iptables --flush", shell=True)
 
-def manipulate_packet_queue(queue_num: int):
+def manipulate_packet_queue(queue_num: int, func: callable):
 	queue = nfq.NetfilterQueue()  		  # create a queue object
-	queue.bind(queue_num, process_packet) # bind to iptables queue
+	queue.bind(queue_num, func) # bind to iptables queue
 	queue.run()							  # run modifications
 
 
@@ -61,4 +61,4 @@ def process_packet(packet: Packet) -> None:
 if __name__ == "__main__":
 	restore_flow()
 	redirect_local(queue_num=0)
-	manipulate_packet_queue(queue_num=0)
+	manipulate_packet_queue(queue_num=0, func=process_packet)
